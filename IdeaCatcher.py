@@ -16,7 +16,7 @@ import datetime
 from hikkatl.tl.functions.channels import CreateChannelRequest
 from .. import loader, utils
 
-__version__ = (0, 0, 1)
+__version__ = (0, 0, 2)
 
 logger = logging.getLogger(__name__)
 
@@ -58,7 +58,7 @@ class IdeaCatcher(loader.Module):
                     break
             if not self.chat:
                 chat = await self._client(CreateChannelRequest(
-                    title="IdeaVault",
+                    title="hikka-ideas",
                     about="Мои идеи, пойманные Hikka",
                     broadcast=False,
                     megagroup=True
